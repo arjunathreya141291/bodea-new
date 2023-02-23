@@ -12,7 +12,7 @@ import ProductViewIcon from "@components/icons/product-view-icon";
 import ProductWishIcon from "@components/icons/product-wish-icon";
 import ProductCompareIcon from "@components/icons/product-compare-icon";
 import RatingDisplay from "@components/common/rating-display";
-import { XCircleIcon } from "@heroicons/react/outline";
+//import { XCircleIcon } from "@heroicons/react/outline";
 import { SearchContext } from "@contexts/search";
 
 interface ProductProps {
@@ -134,7 +134,7 @@ const ProductCard: FC<ProductProps> = ({
           imageContentClassName
         )}
       >
-        <XCircleIcon
+        {/* <XCircleIcon
           className="h-12 w-12 removeIcon text-gray-500"
           style={{
             position: "absolute",
@@ -144,7 +144,7 @@ const ProductCard: FC<ProductProps> = ({
             stroke: "#ffffff",
           }}
           onClick={() => clickRemoveButton(product?.name)}
-        />
+        /> */}
 
         {showCustomDimensionOnImage && (
           <div
