@@ -26,9 +26,10 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
   const { myArray } = useContext(SearchContext);
 
-  useEffect(() => {
-    data?.pages[0].data.filter((p) => !myArray.includes(p.name));
-  }, [myArray]);
+  // useEffect(() => {
+  //   localStorage.setItem("removedItems", JSON.stringify(myArray));
+  //   // data?.pages[0].data.filter((p) => !myArray.includes(p.name));
+  // }, [myArray]);
 
   console.log(myArray);
   console.log(data);
