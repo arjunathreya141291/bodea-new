@@ -11,9 +11,6 @@ const fetchProducts = async ({ queryKey }: any) => {
   const [_key, _params] = queryKey;
   var { data } = await http.get(API_ENDPOINTS.PRODUCTS);
 
-  console.log(_key);
-  console.log(_params);
-
   const { price } = _params;
 
   if ("price" in _params) {

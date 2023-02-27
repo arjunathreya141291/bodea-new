@@ -1,7 +1,7 @@
 import cn from "classnames";
 import Image from "next/image";
 import type { FC } from "react";
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useUI } from "@contexts/ui.context";
 import usePrice from "@framework/product/use-price";
 import { Product } from "@framework/types";
@@ -14,6 +14,11 @@ import ProductCompareIcon from "@components/icons/product-compare-icon";
 import RatingDisplay from "@components/common/rating-display";
 //import { XCircleIcon } from "@heroicons/react/outline";
 import { SearchContext } from "@contexts/search";
+import {
+  IoCloseCircle,
+  IoCloseCircleOutline,
+  IoCloseOutline,
+} from "react-icons/io5";
 
 interface ProductProps {
   product: Product;
@@ -74,8 +79,8 @@ const ProductCard: FC<ProductProps> = ({
   });
 
   const { customDimensionText } = useContext(SearchContext);
-
-  console.log(customDimensionText);
+  // const [myArray, updateMyArray] = useState<string[]>([]);
+  const { myArray, updateMyArray } = useContext(SearchContext);
 
   function handlePopupView() {
     setModalData({ data: product });
@@ -85,8 +90,11 @@ const ProductCard: FC<ProductProps> = ({
 
   function clickRemoveButton(productName: any) {
     setSearchProducts("81");
-    setShowRemovedProducts(true);
-    setProductName(productName);
+
+    const newArray = [...myArray, productName];
+    updateMyArray(newArray);
+    // setShowRemovedProducts(true);
+    // setProductName(productName);
   }
 
   function randomIntFromInterval(min: any, max: any) {
@@ -153,6 +161,25 @@ const ProductCard: FC<ProductProps> = ({
           }}
           onClick={() => clickRemoveButton(product?.name)}
         /> */}
+
+        <a
+          href="#"
+          style={{
+            position: "absolute",
+            zIndex: "1",
+            left: "7px",
+            top: "7px",
+            opacity: "0",
+            stroke: "#ffffff",
+          }}
+          className="buttonRemove"
+          onClick={() => clickRemoveButton(product?.name)}
+        >
+          <span className="iconRemove">
+            <IoCloseOutline className="text-black mt-1 md:mt-0.5" />
+          </span>
+          <span className="textRemove">Remove</span>
+        </a>
 
         {showCustomDimensionOnImage && (
           <div

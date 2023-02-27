@@ -1,17 +1,18 @@
 import ProductCard from "@components/product/product-card";
 import Button from "@components/ui/button";
-import type { FC } from "react";
+import { FC, useContext, useEffect } from "react";
 import { useProductsQuery } from "@framework/product/get-all-products";
 import { useRouter } from "next/router";
 import ProductFeedLoader from "@components/ui/loaders/product-feed-loader";
 import { useTranslation } from "next-i18next";
 import { Product } from "@framework/types";
+import { SearchContext } from "@contexts/search";
 interface ProductGridProps {
   className?: string;
 }
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
   const { query } = useRouter();
-  const {
+  var {
     isFetching: isLoading,
     isFetchingNextPage: loadingMore,
     fetchNextPage,
@@ -23,7 +24,14 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
   const { t } = useTranslation("common");
 
-  console.log("data", data);
+  const { myArray } = useContext(SearchContext);
+
+  useEffect(() => {
+    data?.pages[0].data.filter((p) => !myArray.includes(p.name));
+  }, [myArray]);
+
+  console.log(myArray);
+  console.log(data);
 
   return (
     <>
