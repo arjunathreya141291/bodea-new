@@ -5,6 +5,7 @@ import React, { useContext, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useCart } from "@contexts/cart/cart.context";
 import { SearchContext } from "@contexts/search";
+import { CustomDimensions } from "./custom-dimensions";
 
 export const CategoryFilter = () => {
   // const { searchProducts, setSearchProducts } = useCart();
@@ -63,6 +64,8 @@ export const CategoryFilter = () => {
       <h3 className="text-heading text-sm md:text-base font-semibold mb-7">
         {t("text-category")}
       </h3>
+
+      <CustomDimensions></CustomDimensions>
 
       <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
         Depth

@@ -93,6 +93,10 @@ const ProductCard: FC<ProductProps> = ({
 
     const newArray = [...myArray, productName];
     updateMyArray(newArray);
+
+    localStorage.setItem("removedItem", JSON.stringify(myArray));
+
+    localStorage.setItem("xyz", "helo");
     // setShowRemovedProducts(true);
     // setProductName(productName);
   }

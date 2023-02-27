@@ -47,10 +47,18 @@ export const ProductDifferences = () => {
   React.useEffect(() => {
     setFormState(selectedPrices);
   }, [query?.price]);
-  function handleItemClickStorage(e) {
+
+  function handleItemClickStorage(storage) {
     setSearchProducts("622");
-    const { value } = e.currentTarget;
-    value = "Storage - Drawers";
+    // const { value } = e.currentTarget;
+    let value = "";
+    if (storage === "Shelves") {
+      value = "Storage - Shelves";
+    } else if (storage === "Drawers") {
+      value = "Storage - Drawers";
+    } else if (storage === "No Storage") {
+      value = "Storage - No Storage";
+    }
     let currentFormState = formState.includes(value)
       ? formState.filter((i) => i !== value)
       : [...formState, value];
@@ -71,10 +79,19 @@ export const ProductDifferences = () => {
     );
   }
 
-  function handleItemClickWarranty(e) {
+  function handleItemClickWarranty(warranty) {
     setSearchProducts("82");
-    const { value } = e.currentTarget;
-    value = "Desk Surface Material - Solid wood";
+    const value = "";
+    // const { value } = e.currentTarget;
+    if (warranty === "One Year") {
+      value = "Warranty - One Year";
+    } else if (warranty === "Unlimited") {
+      value = "Warranty - Unlimited";
+    } else if (warranty === "Manufacturer") {
+      value = "Warranty - Manufacturer";
+    }
+
+    // value = "Warranty - Unlimited";
     let currentFormState = formState.includes(value)
       ? formState.filter((i) => i !== value)
       : [...formState, value];
@@ -94,6 +111,40 @@ export const ProductDifferences = () => {
       { scroll: false }
     );
   }
+
+  function handleItemClickMaterial(material) {
+    setSearchProducts("61");
+    const value = "";
+    // const { value } = e.currentTarget;
+    if (material === "Solid Wood") {
+      value = "Material - Solid Wood";
+    } else if (material === "Composite") {
+      value = "Material - Composite";
+    } else if (material === "Manufactured Wood") {
+      value = "Material - Manufactured Wood";
+    }
+
+    // value = "Warranty - Unlimited";
+    let currentFormState = formState.includes(value)
+      ? formState.filter((i) => i !== value)
+      : [...formState, value];
+    // setFormState(currentFormState);
+    const { price, ...restQuery } = query;
+    router.push(
+      {
+        pathname,
+        query: {
+          ...restQuery,
+          ...(!!currentFormState.length
+            ? { price: currentFormState.join(",") }
+            : {}),
+        },
+      },
+      undefined,
+      { scroll: false }
+    );
+  }
+
   const items = priceFilterItems;
 
   const itemClick = () => {
@@ -128,25 +179,23 @@ export const ProductDifferences = () => {
           <div className="flex flex-wrap -m-1.5 pt-2">
             <div
               className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={handleItemClickStorage}
+              onClick={() => handleItemClickStorage("Drawers")}
             >
               Drawers
             </div>
 
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Cubbies
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickStorage("Shelves")}
+            >
               Shelves
             </div>
 
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Cabinets
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              None
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickStorage("No Storage")}
+            >
+              No Storage
             </div>
           </div>
         </>
@@ -158,23 +207,25 @@ export const ProductDifferences = () => {
             Warranty
           </h5>
           <div className="flex flex-wrap -m-1.5 pt-2">
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickWarranty("One Year")}
+            >
               One Year
             </div>
 
             <div
               className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={handleItemClickWarranty}
+              onClick={() => handleItemClickWarranty("Unlimited")}
             >
               Unlimited
             </div>
 
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickWarranty("Manufacturer")}
+            >
               Manufacturer
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              None
             </div>
           </div>
         </>
@@ -188,25 +239,23 @@ export const ProductDifferences = () => {
           <div className="flex flex-wrap -m-1.5 pt-2">
             <div
               className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={handleItemClickWarranty}
+              onClick={() => handleItemClickMaterial("Solid Wood")}
             >
-              Solid wood
+              Solid Wood
             </div>
 
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Glass
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Plastic
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Manufactured wood
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickMaterial("Composite")}
+            >
               Composite
+            </div>
+
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={() => handleItemClickMaterial("Manufactured Wood")}
+            >
+              Manufactured Wood
             </div>
           </div>
         </>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import SearchIcon from "@components/icons/search-icon";
 import { siteSettings } from "@settings/site-settings";
 import HeaderMenu from "@components/layout/header/header-menu";
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                 Search
               </label>
               {/* ::::input */}
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} id="create-form">
                 <input
                   type="search"
                   id="search"

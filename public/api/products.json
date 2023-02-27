@@ -1058,6 +1058,7 @@
     "price": 600.0,
     "sale_price": 580.0,
     "depth": "deep",
+    "storage": "shelves",
     "quantity": 0,
     "variations": [
       {
@@ -2760,8 +2761,9 @@
         "original": "/assets/images/products/p-13-2.png"
       }
     ],
-    "price": 23.0,
-    "sale_price": 13.0,
+    "price": 230.0,
+    "sale_price": 130.0,
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -4339,6 +4341,7 @@
     "price": 300.0,
     "sale_price": 280.0,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -5026,6 +5029,7 @@
     "price": "",
     "sale_price": 180.0,
     "depth": "deep",
+    "storage": "no storage",
     "quantity": 0,
     "variations": [
       {
@@ -5695,6 +5699,7 @@
     "price": "",
     "sale_price": 365.0,
     "depth": "narrow",
+    "storage": "no storage",
     "quantity": 0,
     "variations": [
       {
@@ -6385,6 +6390,7 @@
     "price": "",
     "sale_price": 400.0,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -7292,6 +7298,7 @@
     "price": 180.38,
     "sale_price": 160.3,
     "depth": "deep",
+    "storage": "no storage",
     "quantity": 0,
     "variations": [
       {
@@ -8911,6 +8918,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -9608,6 +9616,7 @@
     "price": 700.0,
     "sale_price": 570.99,
     "depth": "narrow",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -10192,6 +10201,7 @@
     "price": 650.0,
     "sale_price": 570.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -10890,6 +10900,7 @@
     "price": 120.0,
     "sale_price": 100.99,
     "depth": "narrow",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -11006,6 +11017,7 @@
     "price": 450.0,
     "sale_price": 380.99,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -11122,6 +11134,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "narrow",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -11355,6 +11368,7 @@
     "price": 200.0,
     "sale_price": 120.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -11471,6 +11485,7 @@
     "price": 600.0,
     "sale_price": 570.99,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -12287,6 +12302,7 @@
     "price": 600.0,
     "sale_price": 570.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -12403,6 +12419,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "narrow",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -12752,6 +12769,7 @@
     "price": 400.0,
     "sale_price": 370.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -13917,6 +13935,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -14500,6 +14519,7 @@
     "price": 120.0,
     "sale_price": 110.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
