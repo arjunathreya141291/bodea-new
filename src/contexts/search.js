@@ -9,6 +9,7 @@ const SearchProvider = ({ children }) => {
   const [productName, setProductName] = useState("");
   const [showCustomDimensionOnImage, setShowCustomDimensionOnImage] =
     useState(false);
+  const [customDimensionText, setCustomDimensionText] = useState("");
 
   const context = {
     searchProducts,
@@ -19,6 +20,8 @@ const SearchProvider = ({ children }) => {
     setProductName,
     showCustomDimensionOnImage,
     setShowCustomDimensionOnImage,
+    customDimensionText,
+    setCustomDimensionText,
   };
 
   return (

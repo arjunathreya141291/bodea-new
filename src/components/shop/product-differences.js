@@ -74,7 +74,7 @@ export const ProductDifferences = () => {
   function handleItemClickWarranty(e) {
     setSearchProducts("82");
     const { value } = e.currentTarget;
-    value = "Warranty - Unlimited";
+    value = "Desk Surface Material - Solid wood";
     let currentFormState = formState.includes(value)
       ? formState.filter((i) => i !== value)
       : [...formState, value];
@@ -102,6 +102,10 @@ export const ProductDifferences = () => {
     }
 
     if (productDifference === "Warranty") {
+      setProductDifference("deskSurfaceMaterial");
+    }
+
+    if (productDifference === "deskSurfaceMaterial") {
       setProductDifference("Shelving");
     }
 
@@ -171,6 +175,38 @@ export const ProductDifferences = () => {
 
             <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
               None
+            </div>
+          </div>
+        </>
+      )}
+
+      {productDifference === "deskSurfaceMaterial" && (
+        <>
+          <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+            Desk surface material
+          </h5>
+          <div className="flex flex-wrap -m-1.5 pt-2">
+            <div
+              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+              onClick={handleItemClickWarranty}
+            >
+              Solid wood
+            </div>
+
+            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              Glass
+            </div>
+
+            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              Plastic
+            </div>
+
+            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              Manufactured wood
+            </div>
+
+            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              Composite
             </div>
           </div>
         </>

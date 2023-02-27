@@ -45,6 +45,8 @@ export const CustomDimensions = () => {
   const { setShowCustomDimensionOnImage, setSearchProducts } =
     useContext(SearchContext);
 
+  const { setCustomDimensionText } = useContext(SearchContext);
+
   const handleCustomDimensionLineClick = () => {
     setCustomDimensionLineClick(true);
   };
@@ -497,6 +499,7 @@ export const CustomDimensions = () => {
               type="text"
               className="dimensionInput form-input  block shadow-sm border-gray-300 bg-gray-50 text-sm placeholder-black-150 focus:border-blue-300 focus:ring-1 focus:ring-blue-300"
               placeholder="Type name"
+              onChange={(e) => setCustomDimensionText({ text: e.target.value })}
             />
             <button
               className="dimensionButton bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"

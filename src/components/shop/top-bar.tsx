@@ -81,7 +81,7 @@ export default function SearchTopBar() {
 
       <div className="flex items-center justify-end">
         <div className="flex-shrink-0 text-body text-xs md:text-sm leading-4 pe-4 md:me-6 ps-2 hidden lg:block">
-          Over{" "}
+          {searchProducts.length >= 4 && <span>Over </span>}
           <span style={{ color: "black", fontWeight: "bold" }}>
             {searchProducts}
           </span>{" "}

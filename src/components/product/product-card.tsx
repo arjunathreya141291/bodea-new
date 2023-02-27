@@ -72,6 +72,11 @@ const ProductCard: FC<ProductProps> = ({
     baseAmount: product.price,
     currencyCode: "USD",
   });
+
+  const { customDimensionText } = useContext(SearchContext);
+
+  console.log(customDimensionText);
+
   function handlePopupView() {
     setModalData({ data: product });
     setModalView("PRODUCT_VIEW");
@@ -84,7 +89,10 @@ const ProductCard: FC<ProductProps> = ({
     setProductName(productName);
   }
 
-  console.log("showCustomDimensionOnImage", showCustomDimensionOnImage);
+  function randomIntFromInterval(min: any, max: any) {
+    // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
   return (
     <div
@@ -166,7 +174,7 @@ const ProductCard: FC<ProductProps> = ({
               alignItems: "center",
             }}
           >
-            under desk height = 32″
+            {customDimensionText.text} = {randomIntFromInterval(30, 32)}″
           </div>
         )}
 
