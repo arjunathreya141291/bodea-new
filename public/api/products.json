@@ -1174,6 +1174,7 @@
     "price": 150.0,
     "sale_price": 110.0,
     "depth": "deep",
+    "storage": "drawers",
     "variations": [
       {
         "id": 1,
@@ -1518,6 +1519,7 @@
     "price": "",
     "sale_price": 90.0,
     "depth": "deep",
+    "storage": "shelves",
     "quantity": 0,
     "variations": [
       {
@@ -1748,6 +1750,7 @@
     "price": 170.0,
     "sale_price": 155.0,
     "depth": "deep",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -3212,6 +3215,7 @@
     ],
     "price": 160.38,
     "sale_price": 120.3,
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -3557,6 +3561,7 @@
     "price": 150.0,
     "sale_price": 120.0,
     "depth": "standard",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -4914,6 +4919,7 @@
     "price": 190.99,
     "sale_price": 140.99,
     "depth": "deep",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -5373,6 +5379,7 @@
     ],
     "price": 560.38,
     "sale_price": 520.3,
+    "storage": "no storage",
     "depth": "deep",
     "quantity": 0,
     "variations": [
@@ -6161,6 +6168,7 @@
     "price": 300.0,
     "sale_price": 120.0,
     "depth": "deep",
+    "storage": "drawers",
     "variations": [
       {
         "id": 1,
@@ -7069,6 +7077,7 @@
     "price": 280.0,
     "sale_price": 100.0,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -9035,6 +9044,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "narrow",
+    "storage": "drawers",
     "variations": [
       {
         "id": 1,
@@ -11602,6 +11612,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "standard",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -13119,6 +13130,7 @@
     "price": 400.0,
     "sale_price": 370.99,
     "depth": "standard",
+    "storage": "drawers",
     "variations": [
       {
         "id": 1,
@@ -14169,6 +14181,7 @@
     "price": 700.0,
     "sale_price": 670.99,
     "depth": "narrow",
+    "storage": "shelves",
     "variations": [
       {
         "id": 1,
@@ -14636,6 +14649,7 @@
     "price": 200.0,
     "sale_price": 170.99,
     "depth": "standard",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -14985,6 +14999,7 @@
     "price": 200.0,
     "sale_price": 120.99,
     "depth": "narrow",
+    "storage": "no storage",
     "variations": [
       {
         "id": 1,
@@ -15450,6 +15465,7 @@
     "price": 400.0,
     "sale_price": 370.99,
     "depth": "standard",
+    "storage": "drawers",
     "variations": [
       {
         "id": 1,

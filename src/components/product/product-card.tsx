@@ -89,7 +89,7 @@ const ProductCard: FC<ProductProps> = ({
   }
 
   function clickRemoveButton(productName: any) {
-    setSearchProducts("81");
+    // setSearchProducts("81");
 
     const newArray = [...myArray, productName];
     updateMyArray(newArray);

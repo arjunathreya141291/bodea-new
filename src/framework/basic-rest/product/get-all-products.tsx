@@ -3,6 +3,7 @@ import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import http from "@framework/utils/http";
 import shuffle from "lodash/shuffle";
 import { useInfiniteQuery } from "react-query";
+
 type PaginatedProduct = {
   data: Product[];
   paginatorInfo: any;
@@ -11,11 +12,24 @@ const fetchProducts = async ({ queryKey }: any) => {
   const [_key, _params] = queryKey;
   var { data } = await http.get(API_ENDPOINTS.PRODUCTS);
 
+  console.log(_params);
+
+  if ("myArray" in _params) {
+    const myArray = _params.myArray;
+    data = data.filter((p: any) => !myArray.includes(p.name));
+  }
+  // console.log(_key);
+
+  const test = ["Meridiani"];
+
   const { price } = _params;
 
-  if ("price" in _params) {
-    console.log("pp", price);
+  if (test.length > 0) {
+    console.log(data);
+    data = data.filter((p: any) => !test.includes(p.name));
+  }
 
+  if ("price" in _params) {
     data = data.filter((el: any) => {
       if (price === "Storage - Drawers") {
         return el.storage === "drawers";

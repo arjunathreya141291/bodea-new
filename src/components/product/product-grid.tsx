@@ -1,8 +1,9 @@
+// @ts-nocheck
 import ProductCard from "@components/product/product-card";
 import Button from "@components/ui/button";
 import { FC, useContext, useEffect } from "react";
 import { useProductsQuery } from "@framework/product/get-all-products";
-import { useRouter } from "next/router";
+import Router, { useRouter } from "next/router";
 import ProductFeedLoader from "@components/ui/loaders/product-feed-loader";
 import { useTranslation } from "next-i18next";
 import { Product } from "@framework/types";
@@ -11,7 +12,8 @@ interface ProductGridProps {
   className?: string;
 }
 export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
-  const { query } = useRouter();
+  const { query, pathname } = useRouter();
+  const router = useRouter();
   var {
     isFetching: isLoading,
     isFetchingNextPage: loadingMore,
@@ -24,15 +26,27 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
   const { t } = useTranslation("common");
 
-  const { myArray } = useContext(SearchContext);
+  const { myArray, searchProducts, setSearchProducts } =
+    useContext(SearchContext);
 
-  // useEffect(() => {
-  //   localStorage.setItem("removedItems", JSON.stringify(myArray));
-  //   // data?.pages[0].data.filter((p) => !myArray.includes(p.name));
-  // }, [myArray]);
+  useEffect(() => {
+    router.push(
+      {
+        pathname,
+        query: { ...query, myArray },
+      },
+      undefined,
+      { scroll: false }
+    );
+    console.log("hello", myArray);
 
-  console.log(myArray);
-  console.log(data);
+    const newValueOfSearchProducts = "";
+
+    if (myArray.length > 0) {
+      newValueOfSearchProducts = parseInt(searchProducts) - 1;
+      setSearchProducts(newValueOfSearchProducts);
+    }
+  }, [myArray]);
 
   return (
     <>
