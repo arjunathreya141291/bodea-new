@@ -110,11 +110,11 @@ export const siteSettings = {
         path: "/search",
         label: "Outdoor",
       },
-      {
-        id: 4,
-        path: "/search",
-        label: "Bedding & Bath",
-      },
+      // {
+      //   id: 4,
+      //   path: "/search",
+      //   label: "Bedding & Bath",
+      // },
       {
         id: 5,
         path: "/search",
@@ -130,11 +130,11 @@ export const siteSettings = {
         path: "/search",
         label: "Kitchen",
       },
-      {
-        id: 8,
-        path: "/search",
-        label: "Baby & Kids",
-      },
+      // {
+      //   id: 8,
+      //   path: "/search",
+      //   label: "Baby & Kids",
+      // },
       {
         id: 9,
         path: "/search",

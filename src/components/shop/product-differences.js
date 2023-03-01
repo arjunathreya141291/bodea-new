@@ -49,6 +49,7 @@ export const ProductDifferences = () => {
   }, [query?.price]);
 
   function handleItemClickStorage(storage) {
+    itemClick();
     setSearchProducts("622");
     // const { value } = e.currentTarget;
     let value = "";
@@ -80,6 +81,7 @@ export const ProductDifferences = () => {
   }
 
   function handleItemClickWarranty(warranty) {
+    itemClick();
     setSearchProducts("82");
     const value = "";
     // const { value } = e.currentTarget;
@@ -113,6 +115,8 @@ export const ProductDifferences = () => {
   }
 
   function handleItemClickMaterial(material) {
+    itemClick();
+
     setSearchProducts("61");
     const value = "";
     // const { value } = e.currentTarget;
@@ -289,7 +293,7 @@ export const ProductDifferences = () => {
       {productDifference !== "Shelving" && (
         <div style={{ paddingTop: "20px" }} onClick={itemClick}>
           <Link href="#" style={{ textDecoration: "underline" }}>
-            Next difference
+            Skip difference
           </Link>
         </div>
       )}
