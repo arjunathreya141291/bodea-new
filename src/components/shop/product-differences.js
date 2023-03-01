@@ -175,128 +175,129 @@ export const ProductDifferences = () => {
         Product Differences
       </h3>
 
-      {productDifference === "Storage" && (
-        <>
-          <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
-            Storage
-          </h5>
-          <div className="flex flex-wrap -m-1.5 pt-2">
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickStorage("Drawers")}
-            >
-              Drawers
-            </div>
+      <div className="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow">
+        {productDifference === "Storage" && (
+          <>
+            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+              Storage
+            </h5>
+            <div className="flex flex-wrap -m-1.5 pt-2">
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickStorage("Drawers")}
+              >
+                Drawers
+              </div>
 
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickStorage("Shelves")}
-            >
-              Shelves
-            </div>
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickStorage("Shelves")}
+              >
+                Shelves
+              </div>
 
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickStorage("No Storage")}
-            >
-              No Storage
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickStorage("No Storage")}
+              >
+                No Storage
+              </div>
             </div>
+          </>
+        )}
+        {productDifference === "Warranty" && (
+          <>
+            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+              Warranty
+            </h5>
+            <div className="flex flex-wrap -m-1.5 pt-2">
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickWarranty("One Year")}
+              >
+                One Year
+              </div>
+
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickWarranty("Unlimited")}
+              >
+                Unlimited
+              </div>
+
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickWarranty("Manufacturer")}
+              >
+                Manufacturer
+              </div>
+            </div>
+          </>
+        )}
+
+        {productDifference === "deskSurfaceMaterial" && (
+          <>
+            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+              Desk surface material
+            </h5>
+            <div className="flex flex-wrap -m-1.5 pt-2">
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickMaterial("Solid Wood")}
+              >
+                Solid Wood
+              </div>
+
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickMaterial("Composite")}
+              >
+                Composite
+              </div>
+
+              <div
+                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                onClick={() => handleItemClickMaterial("Manufactured Wood")}
+              >
+                Manufactured Wood
+              </div>
+            </div>
+          </>
+        )}
+
+        {productDifference === "Shelving" && (
+          <>
+            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+              Peripheral Shelving
+            </h5>
+            <div className="flex flex-wrap -m-1.5 pt-2">
+              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+                Monitor platform
+              </div>
+
+              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+                Keyboard shelf
+              </div>
+
+              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+                Speaker hutch
+              </div>
+
+              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+                None
+              </div>
+            </div>
+          </>
+        )}
+
+        {productDifference !== "Shelving" && (
+          <div style={{ paddingTop: "20px" }} onClick={itemClick}>
+            <Link href="#" style={{ textDecoration: "underline" }}>
+              Skip difference
+            </Link>
           </div>
-        </>
-      )}
-
-      {productDifference === "Warranty" && (
-        <>
-          <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
-            Warranty
-          </h5>
-          <div className="flex flex-wrap -m-1.5 pt-2">
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickWarranty("One Year")}
-            >
-              One Year
-            </div>
-
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickWarranty("Unlimited")}
-            >
-              Unlimited
-            </div>
-
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickWarranty("Manufacturer")}
-            >
-              Manufacturer
-            </div>
-          </div>
-        </>
-      )}
-
-      {productDifference === "deskSurfaceMaterial" && (
-        <>
-          <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
-            Desk surface material
-          </h5>
-          <div className="flex flex-wrap -m-1.5 pt-2">
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickMaterial("Solid Wood")}
-            >
-              Solid Wood
-            </div>
-
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickMaterial("Composite")}
-            >
-              Composite
-            </div>
-
-            <div
-              className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-              onClick={() => handleItemClickMaterial("Manufactured Wood")}
-            >
-              Manufactured Wood
-            </div>
-          </div>
-        </>
-      )}
-
-      {productDifference === "Shelving" && (
-        <>
-          <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
-            Peripheral Shelving
-          </h5>
-          <div className="flex flex-wrap -m-1.5 pt-2">
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Monitor platform
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Keyboard shelf
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              Speaker hutch
-            </div>
-
-            <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
-              None
-            </div>
-          </div>
-        </>
-      )}
-
-      {productDifference !== "Shelving" && (
-        <div style={{ paddingTop: "20px" }} onClick={itemClick}>
-          <Link href="#" style={{ textDecoration: "underline" }}>
-            Skip difference
-          </Link>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
