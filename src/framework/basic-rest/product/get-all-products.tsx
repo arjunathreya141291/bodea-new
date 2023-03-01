@@ -18,16 +18,8 @@ const fetchProducts = async ({ queryKey }: any) => {
     const myArray = _params.myArray;
     data = data.filter((p: any) => !myArray.includes(p.name));
   }
-  // console.log(_key);
-
-  const test = ["Meridiani"];
 
   const { price } = _params;
-
-  if (test.length > 0) {
-    console.log(data);
-    data = data.filter((p: any) => !test.includes(p.name));
-  }
 
   if ("price" in _params) {
     data = data.filter((el: any) => {
@@ -188,7 +180,7 @@ const fetchProducts = async ({ queryKey }: any) => {
   }
 
   return {
-    data: shuffle(data),
+    data: data.sort((a: any, b: any) => b.sale_price - a.sale_price),
     paginatorInfo: {
       nextPageUrl: "",
     },
