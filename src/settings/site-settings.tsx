@@ -130,11 +130,11 @@ export const siteSettings = {
         path: "/search",
         label: "Kitchen",
       },
-      // {
-      //   id: 8,
-      //   path: "/search",
-      //   label: "Baby & Kids",
-      // },
+      {
+        id: 8,
+        path: "/search",
+        label: "Baby & Kids",
+      },
       {
         id: 9,
         path: "/search",
