@@ -19,6 +19,7 @@ import {
   IoCloseCircleOutline,
   IoCloseOutline,
 } from "react-icons/io5";
+import { useRouter } from "next/router";
 
 interface ProductProps {
   product: Product;
@@ -81,6 +82,8 @@ const ProductCard: FC<ProductProps> = ({
   const { customDimensionText } = useContext(SearchContext);
   // const [myArray, updateMyArray] = useState<string[]>([]);
   const { myArray, updateMyArray } = useContext(SearchContext);
+  const router = useRouter();
+  const { query, pathname } = useRouter();
 
   function handlePopupView() {
     setModalData({ data: product });
@@ -105,6 +108,17 @@ const ProductCard: FC<ProductProps> = ({
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
+
+  const handleHeight = (label: any, height: any) => {
+    router.push(
+      {
+        pathname,
+        query: { ...query, label, height },
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
 
   return (
     <div
@@ -205,7 +219,13 @@ const ProductCard: FC<ProductProps> = ({
               alignItems: "center",
             }}
           >
-            {customDimensionText.text} = {randomIntFromInterval(30, 32)}″
+            <span
+              onClick={() =>
+                handleHeight(customDimensionText.text, product?.height)
+              }
+            >
+              {customDimensionText.text} = {product?.height}″
+            </span>
           </div>
         )}
 

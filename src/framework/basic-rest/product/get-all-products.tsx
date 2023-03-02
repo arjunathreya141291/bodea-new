@@ -1,6 +1,7 @@
 import { QueryOptionsType, Product } from "@framework/types";
 import { API_ENDPOINTS } from "@framework/utils/api-endpoints";
 import http from "@framework/utils/http";
+import { filter } from "lodash";
 import shuffle from "lodash/shuffle";
 import { useInfiniteQuery } from "react-query";
 
@@ -16,7 +17,27 @@ const fetchProducts = async ({ queryKey }: any) => {
 
   if ("myArray" in _params) {
     const myArray = _params.myArray;
+    console.log(data);
     data = data.filter((p: any) => !myArray.includes(p.name));
+    console.log("after", data);
+  }
+
+  if ("height" in _params) {
+    const height = _params.height;
+
+    console.log("hhhh", height);
+    console.log("before", data);
+    data = data.filter((el: any) => {
+      return el.height !== undefined;
+      // return el.height !== "undefined" && el.height === height;
+    });
+    console.log("data", data);
+
+    data = data.filter((el: any) => {
+      console.log(el.height);
+      return el.height === parseInt(height);
+    });
+    console.log("data", data);
   }
 
   const { price } = _params;
@@ -46,6 +67,26 @@ const fetchProducts = async ({ queryKey }: any) => {
       } else if (price === "Storage - Shelves,Warranty - Manufacturer") {
         return el.storage === "shelves";
       } else if (price === "Storage - No Storage,Warranty - Manufacturer") {
+        return el.storage === "no storage";
+      } else if (price === "Storage - Drawers,Material - Solid Wood") {
+        return el.storage === "drawers";
+      } else if (price === "Storage - Shelves,Material - Solid Wood") {
+        return el.storage === "shelves";
+      } else if (price === "Storage - No Storage,Material - Solid Wood") {
+        return el.storage === "no storage";
+      } else if (price === "Storage - Drawers,Material - Manufactured Wood") {
+        return el.storage === "drawers";
+      } else if (price === "Storage - Shelves,Material - Manufactured Wood") {
+        return el.storage === "shelves";
+      } else if (
+        price === "Storage - No Storage,Material - Manufactured Wood"
+      ) {
+        return el.storage === "no storage";
+      } else if (price === "Storage - Drawers,Material - Composite") {
+        return el.storage === "drawers";
+      } else if (price === "Storage - Shelves,Material - Composite") {
+        return el.storage === "shelves";
+      } else if (price === "Storage - No Storage,Material - Composite") {
         return el.storage === "no storage";
       } else if (
         price === "Storage - Drawers,Warranty - One Year,Material - Solid Wood"

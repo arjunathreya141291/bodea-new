@@ -1,15 +1,23 @@
 import { useRouter } from "next/router";
 import { IoClose } from "react-icons/io5";
 import isEmpty from "lodash/isEmpty";
+import { useState } from "react";
 
 interface Props {
-  itemKey: string;
+  itemKey: any;
   itemValue: string;
 }
 
 export const FilteredItem = ({ itemKey, itemValue }: Props) => {
   const router = useRouter();
   const { pathname, query } = router;
+  const [removedProductsFilter, setRemovedProductsFilter] = useState(false);
+
+  // if (itemKey === "myArray") {
+  //   setRemovedProductsFilter(true);
+  // }
+
+  console.log(itemKey);
 
   function handleClose() {
     const currentItem = (query[itemKey]! as string)
