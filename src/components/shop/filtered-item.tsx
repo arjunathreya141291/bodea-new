@@ -17,8 +17,6 @@ export const FilteredItem = ({ itemKey, itemValue }: Props) => {
   //   setRemovedProductsFilter(true);
   // }
 
-  console.log(router);
-
   function handleClose() {
     const currentItem = (query[itemKey]! as string)
       .split(",")

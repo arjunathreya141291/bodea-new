@@ -38,7 +38,6 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
       undefined,
       { scroll: false }
     );
-    console.log("hello", myArray);
 
     const newValueOfSearchProducts = "";
 
@@ -47,6 +46,16 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
       setSearchProducts(newValueOfSearchProducts);
     }
   }, [myArray]);
+
+  useEffect(() => {
+    console.log(query.height !== null);
+    if (data && query.height && query.height !== null) {
+      // console.log("i am in here");
+      // console.log(data);
+      // console.log(data?.pages[0].data.length);
+      setSearchProducts(data?.pages[0].data.length);
+    }
+  }, [router, data]);
 
   return (
     <>

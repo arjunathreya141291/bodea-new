@@ -13,31 +13,22 @@ const fetchProducts = async ({ queryKey }: any) => {
   const [_key, _params] = queryKey;
   var { data } = await http.get(API_ENDPOINTS.PRODUCTS);
 
-  console.log(_params);
-
   if ("myArray" in _params) {
     const myArray = _params.myArray;
-    console.log(data);
     data = data.filter((p: any) => !myArray.includes(p.name));
-    console.log("after", data);
   }
 
   if ("height" in _params) {
     const height = _params.height;
 
-    console.log("hhhh", height);
-    console.log("before", data);
     data = data.filter((el: any) => {
       return el.height !== undefined;
       // return el.height !== "undefined" && el.height === height;
     });
-    console.log("data", data);
 
     data = data.filter((el: any) => {
-      console.log(el.height);
       return el.height === parseInt(height);
     });
-    console.log("data", data);
   }
 
   const { price } = _params;
