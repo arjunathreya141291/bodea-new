@@ -497,9 +497,10 @@
         "original": "/assets/images/products/p-15-4.png"
       }
     ],
-    "price": 460.0,
-    "sale_price": 390.0,
+    "price": 760.0,
+    "sale_price": 690.0,
     "depth": "standard",
+    "storage": "shelves",
     "height": 30,
     "quantity": 0,
     "variations": [
@@ -2095,8 +2096,8 @@
         "original": "/assets/images/products/p-9-4.png"
       }
     ],
-    "price": 450.0,
-    "sale_price": 380.0,
+    "price": "",
+    "sale_price": 690.0,
     "depth": "standard",
     "material": "wood",
     "variations": [
@@ -2663,8 +2664,8 @@
         "original": "/assets/images/products/p-9-4.png"
       }
     ],
-    "price": 300.0,
-    "sale_price": 130.0,
+    "price": 800.0,
+    "sale_price": 700.0,
     "height": 30,
     "depth": "standard",
     "storage": "drawers",
@@ -3694,8 +3695,8 @@
         "original": "/assets/images/products/p-6-4.png"
       }
     ],
-    "price": 700.0,
-    "sale_price": 550.0,
+    "price": "",
+    "sale_price": 675.0,
     "depth": "deep",
     "variations": [
       {
@@ -9890,8 +9891,8 @@
         "original": "/assets/images/products/p-11-4.png"
       }
     ],
-    "price": 400.0,
-    "sale_price": 370.99,
+    "price": 710.0,
+    "sale_price": 680.0,
     "height": 30,
     "depth": "standard",
     "storage": "drawers",
@@ -14229,7 +14230,7 @@
       }
     ],
     "price": 700.0,
-    "sale_price": 670.99,
+    "sale_price": 470.99,
     "depth": "narrow",
     "storage": "shelves",
     "height": 30,
@@ -14347,7 +14348,7 @@
       }
     ],
     "price": 800.0,
-    "sale_price": 770.99,
+    "sale_price": 570.99,
     "height": 30,
     "depth": "narrow",
     "storage": "drawers",
@@ -15751,8 +15752,8 @@
         "original": "/assets/images/products/p-11-4.png"
       }
     ],
-    "price": 700.0,
-    "sale_price": 680.99,
+    "price": 400.0,
+    "sale_price": 380.99,
     "depth": "standard",
     "variations": [
       {
