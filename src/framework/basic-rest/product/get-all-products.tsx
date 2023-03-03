@@ -68,11 +68,11 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "shelves";
       } else if (price === "Storage - No Storage,Warranty - Manufacturer") {
         return el.storage === "no storage";
-      } else if (price === "Storage - Drawers,Material - Solid Wood") {
+      } else if (price === "Storage - Drawers,Material - Natural Wood") {
         return el.storage === "drawers";
-      } else if (price === "Storage - Shelves,Material - Solid Wood") {
+      } else if (price === "Storage - Shelves,Material - Natural Wood") {
         return el.storage === "shelves";
-      } else if (price === "Storage - No Storage,Material - Solid Wood") {
+      } else if (price === "Storage - No Storage,Material - Natural Wood") {
         return el.storage === "no storage";
       } else if (price === "Storage - Drawers,Material - Manufactured Wood") {
         return el.storage === "drawers";
@@ -82,14 +82,15 @@ const fetchProducts = async ({ queryKey }: any) => {
         price === "Storage - No Storage,Material - Manufactured Wood"
       ) {
         return el.storage === "no storage";
-      } else if (price === "Storage - Drawers,Material - Composite") {
+      } else if (price === "Storage - Drawers,Material - Composite Wood") {
         return el.storage === "drawers";
-      } else if (price === "Storage - Shelves,Material - Composite") {
+      } else if (price === "Storage - Shelves,Material - Composite Wood") {
         return el.storage === "shelves";
-      } else if (price === "Storage - No Storage,Material - Composite") {
+      } else if (price === "Storage - No Storage,Material - Composite Wood") {
         return el.storage === "no storage";
       } else if (
-        price === "Storage - Drawers,Warranty - One Year,Material - Solid Wood"
+        price ===
+        "Storage - Drawers,Warranty - One Year,Material - Natural Wood"
       ) {
         return el.storage === "drawers";
       } else if (
@@ -98,11 +99,13 @@ const fetchProducts = async ({ queryKey }: any) => {
       ) {
         return el.storage === "drawers";
       } else if (
-        price === "Storage - Drawers,Warranty - One Year,Material - Composite"
+        price ===
+        "Storage - Drawers,Warranty - One Year,Material - Composite Wood"
       ) {
         return el.storage === "drawers";
       } else if (
-        price === "Storage - Drawers,Warranty - Unlimited,Material - Solid Wood"
+        price ===
+        "Storage - Drawers,Warranty - Unlimited,Material - Natural Wood"
       ) {
         console.log("am in ");
         return el.storage === "drawers";
@@ -112,12 +115,13 @@ const fetchProducts = async ({ queryKey }: any) => {
       ) {
         return el.storage === "drawers";
       } else if (
-        price === "Storage - Drawers,Warranty - Unlimited,Material - Composite"
+        price ===
+        "Storage - Drawers,Warranty - Unlimited,Material - Composite Wood"
       ) {
         return el.storage === "drawers";
       } else if (
         price ===
-        "Storage - Drawers,Warranty - Manufacturer,Material - Solid Wood"
+        "Storage - Drawers,Warranty - Manufacturer,Material - Natural Wood"
       ) {
         return el.storage === "drawers";
       } else if (
@@ -127,11 +131,12 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "drawers";
       } else if (
         price ===
-        "Storage - Drawers,Warranty - Manufacturer,Material - Composite"
+        "Storage - Drawers,Warranty - Manufacturer,Material - Composite Wood"
       ) {
         return el.storage === "drawers";
       } else if (
-        price === "Storage - Shelves,Warranty - One Year,Material - Solid Wood"
+        price ===
+        "Storage - Shelves,Warranty - One Year,Material - Natural Wood"
       ) {
         return el.storage === "shelves";
       } else if (
@@ -140,11 +145,13 @@ const fetchProducts = async ({ queryKey }: any) => {
       ) {
         return el.storage === "shelves";
       } else if (
-        price === "Storage - Shelves,Warranty - One Year,Material - Composite"
+        price ===
+        "Storage - Shelves,Warranty - One Year,Material - Composite Wood"
       ) {
         return el.storage === "shelves";
       } else if (
-        price === "Storage - Shelves,Warranty - Unlimited,Material - Solid Wood"
+        price ===
+        "Storage - Shelves,Warranty - Unlimited,Material - Natural Wood"
       ) {
         return el.storage === "shelves";
       } else if (
@@ -153,12 +160,13 @@ const fetchProducts = async ({ queryKey }: any) => {
       ) {
         return el.storage === "shelves";
       } else if (
-        price === "Storage - Shelves,Warranty - Unlimited,Material - Composite"
+        price ===
+        "Storage - Shelves,Warranty - Unlimited,Material - Composite Wood"
       ) {
         return el.storage === "shelves";
       } else if (
         price ===
-        "Storage - Shelves,Warranty - Manufacturer,Material - Solid Wood"
+        "Storage - Shelves,Warranty - Manufacturer,Material - Natural Wood"
       ) {
         return el.storage === "shelves";
       } else if (
@@ -168,12 +176,12 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "shelves";
       } else if (
         price ===
-        "Storage - Shelves,Warranty - Manufacturer,Material - Composite"
+        "Storage - Shelves,Warranty - Manufacturer,Material - Composite Wood"
       ) {
         return el.storage === "shelves";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - One Year,Material - Solid Wood"
+        "Storage - No Storage,Warranty - One Year,Material - Natural Wood"
       ) {
         return el.storage === "no storage";
       } else if (
@@ -183,12 +191,12 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "no storage";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - One Year,Material - Composite"
+        "Storage - No Storage,Warranty - One Year,Material - Composite Wood"
       ) {
         return el.storage === "no storage";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - Unlimited,Material - Solid Wood"
+        "Storage - No Storage,Warranty - Unlimited,Material - Natural Wood"
       ) {
         return el.storage === "no storage";
       } else if (
@@ -198,12 +206,12 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "no storage";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - Unlimited,Material - Composite"
+        "Storage - No Storage,Warranty - Unlimited,Material - Composite Wood"
       ) {
         return el.storage === "no storage";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - Manufacturer,Material - Solid Wood"
+        "Storage - No Storage,Warranty - Manufacturer,Material - Natural Wood"
       ) {
         return el.storage === "no storage";
       } else if (
@@ -213,7 +221,7 @@ const fetchProducts = async ({ queryKey }: any) => {
         return el.storage === "no storage";
       } else if (
         price ===
-        "Storage - No Storage,Warranty - Manufacturer,Material - Composite"
+        "Storage - No Storage,Warranty - Manufacturer,Material - Composite Wood"
       ) {
         return el.storage === "no storage";
       }

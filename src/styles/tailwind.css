@@ -385,6 +385,32 @@
   stroke: #1f39ff;
 }
 
+#Line_5529:hover {
+  stroke: #1f39ff;
+  cursor: pointer;
+}
+
+#Line_5529:hover ~ #Line_5533 {
+  stroke: #1f39ff;
+}
+
+#Line_5529:hover ~ #Line_5534 {
+  stroke: #1f39ff;
+}
+
+#Path_976250:hover {
+  stroke: #1f39ff;
+  cursor: pointer;
+}
+
+#Path_976250:hover ~ #Path_976256 {
+  stroke: #1f39ff;
+}
+
+#Path_976250:hover ~ #Line_5535 {
+  stroke: #1f39ff;
+}
+
 .customDimension {
   display: grid;
   grid-template-areas: "dimensionInput dimensionButton";

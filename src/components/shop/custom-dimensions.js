@@ -504,7 +504,7 @@ export const CustomDimensions = () => {
             </button>
           </div>
 
-          <div class="flex items-center mb-2 mt-4">
+          {/* <div class="flex items-center mb-2 mt-4">
             <input
               id="default-checkbox"
               type="checkbox"
@@ -517,7 +517,7 @@ export const CustomDimensions = () => {
             >
               Track dimension across results
             </label>
-          </div>
+          </div> */}
         </div>
       )}
     </div>

@@ -120,10 +120,10 @@ export const ProductDifferences = () => {
     setSearchProducts("61");
     const value = "";
     // const { value } = e.currentTarget;
-    if (material === "Solid Wood") {
-      value = "Material - Solid Wood";
-    } else if (material === "Composite") {
-      value = "Material - Composite";
+    if (material === "Natural Wood") {
+      value = "Material - Natural Wood";
+    } else if (material === "Composite Wood") {
+      value = "Material - Composite Wood";
     } else if (material === "Manufactured Wood") {
       value = "Material - Manufactured Wood";
     }
@@ -238,21 +238,21 @@ export const ProductDifferences = () => {
         {productDifference === "deskSurfaceMaterial" && (
           <>
             <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
-              Desk surface material
+              Surface Material
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
               <div
                 className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-                onClick={() => handleItemClickMaterial("Solid Wood")}
+                onClick={() => handleItemClickMaterial("Natural Wood")}
               >
-                Solid Wood
+                Natural Wood
               </div>
 
               <div
                 className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
-                onClick={() => handleItemClickMaterial("Composite")}
+                onClick={() => handleItemClickMaterial("Composite Wood")}
               >
-                Composite
+                Composite Wood
               </div>
 
               <div
