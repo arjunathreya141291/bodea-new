@@ -178,26 +178,26 @@ export const ProductDifferences = () => {
       <div className="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow">
         {productDifference === "Storage" && (
           <>
-            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
               Storage
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("Drawers")}
               >
                 Drawers
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("Shelves")}
               >
                 Shelves
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("No Storage")}
               >
                 No Storage
@@ -207,10 +207,10 @@ export const ProductDifferences = () => {
         )}
         {productDifference === "Warranty" && (
           <>
-            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+            <h5 className="text-heading text-sm md:text-base font-semibold mb-7 skipFade">
               Warranty
             </h5>
-            <div className="flex flex-wrap -m-1.5 pt-2">
+            <div className="flex flex-wrap -m-1.5 pt-2 skipFade">
               <div
                 className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickWarranty("One Year")}
@@ -219,14 +219,14 @@ export const ProductDifferences = () => {
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickWarranty("Unlimited")}
               >
                 Unlimited
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickWarranty("Manufacturer")}
               >
                 Manufacturer
@@ -237,26 +237,26 @@ export const ProductDifferences = () => {
 
         {productDifference === "deskSurfaceMaterial" && (
           <>
-            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
               Surface Material
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickMaterial("Natural Wood")}
               >
                 Natural Wood
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickMaterial("Composite Wood")}
               >
                 Composite Wood
               </div>
 
               <div
-                className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickMaterial("Manufactured Wood")}
               >
                 Manufactured Wood
@@ -267,23 +267,23 @@ export const ProductDifferences = () => {
 
         {productDifference === "Shelving" && (
           <>
-            <h5 className="text-heading text-sm md:text-base font-semibold mb-7">
+            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
               Peripheral Shelving
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
-              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              <div className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
                 Monitor platform
               </div>
 
-              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              <div className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
                 Keyboard shelf
               </div>
 
-              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              <div className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
                 Speaker hutch
               </div>
 
-              <div className="group flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
+              <div className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading">
                 None
               </div>
             </div>
@@ -292,7 +292,12 @@ export const ProductDifferences = () => {
 
         {productDifference !== "Shelving" && (
           <div style={{ paddingTop: "20px" }} onClick={itemClick}>
-            <Link href="#" style={{ textDecoration: "underline" }}>
+            <Link
+              href="#"
+              style={{
+                textDecoration: "underline",
+              }}
+            >
               Skip difference
             </Link>
           </div>

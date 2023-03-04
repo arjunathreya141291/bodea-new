@@ -457,3 +457,16 @@
   white-space: nowrap;
   padding-right: 15px;
 }
+
+.skipFade {
+  animation: fade-in-keyframes ease 5s;
+}
+
+@keyframes fade-in-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
