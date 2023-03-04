@@ -178,26 +178,26 @@ export const ProductDifferences = () => {
       <div className="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow">
         {productDifference === "Storage" && (
           <>
-            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
+            <h5 className="text-heading  text-sm md:text-base font-semibold mb-7">
               Storage
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
               <div
-                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group  flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("Drawers")}
               >
                 Drawers
               </div>
 
               <div
-                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group  flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("Shelves")}
               >
                 Shelves
               </div>
 
               <div
-                className="group skipFade flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
+                className="group  flex flex-shrink-0 m-1.5 items-center border border-gray-300 bg-borderBottom rounded-lg text-xs px-3.5 py-2.5 capitalize text-heading cursor-pointer transition duration-200 ease-in-out hover:border-heading"
                 onClick={() => handleItemClickStorage("No Storage")}
               >
                 No Storage
