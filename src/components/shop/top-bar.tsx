@@ -23,7 +23,7 @@ export default function SearchTopBar() {
   const contentWrapperCSS = dir === "ltr" ? { left: 0 } : { right: 0 };
 
   return (
-    <div className="flex justify-between items-center mb-7">
+    <div className="flex justify-between items-center">
       <Text variant="pageHeading" className="hidden lg:inline-flex pb-1">
         {t("text-casual-wear")}
       </Text>
@@ -77,13 +77,6 @@ export default function SearchTopBar() {
       )}
 
       <div className="flex items-center justify-end">
-        <div className="flex-shrink-0 text-body text-xs md:text-sm leading-4 pe-4 md:me-6 ps-2 hidden lg:block">
-          {searchProducts.length >= 4 && <span>Over </span>}
-          <span style={{ color: "black", fontWeight: "bold" }}>
-            {searchProducts}
-          </span>{" "}
-          {t("text-items")}
-        </div>
         <ListBox
           options={[
             { name: "text-sorting-options", value: "options" },
