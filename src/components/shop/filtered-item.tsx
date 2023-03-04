@@ -13,7 +13,7 @@ export const FilteredItem = ({ itemKey, itemValue }: Props) => {
   const { pathname, query } = router;
   const [removedProductsFilter, setRemovedProductsFilter] = useState(false);
 
-  // if (itemKey === "myArray") {
+  // if (itemKey === "removedProducts") {
   //   setRemovedProductsFilter(true);
   // }
 
@@ -31,7 +31,7 @@ export const FilteredItem = ({ itemKey, itemValue }: Props) => {
     });
   }
 
-  // if (itemKey === "myArray") {
+  // if (itemKey === "removedProducts") {
   //   return (
   //     <>
   //       <div

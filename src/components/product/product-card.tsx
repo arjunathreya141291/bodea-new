@@ -80,8 +80,8 @@ const ProductCard: FC<ProductProps> = ({
   });
 
   const { customDimensionText } = useContext(SearchContext);
-  // const [myArray, updateMyArray] = useState<string[]>([]);
-  const { myArray, updateMyArray } = useContext(SearchContext);
+  // const [removedProducts, updateremovedProducts] = useState<string[]>([]);
+  const { removedProducts, updateremovedProducts } = useContext(SearchContext);
   const router = useRouter();
   const { query, pathname } = useRouter();
 
@@ -94,10 +94,10 @@ const ProductCard: FC<ProductProps> = ({
   function clickRemoveButton(productName: any) {
     // setSearchProducts("81");
 
-    const newArray = [...myArray, productName];
-    updateMyArray(newArray);
+    const newArray = [...removedProducts, productName];
+    updateremovedProducts(newArray);
 
-    localStorage.setItem("removedItem", JSON.stringify(myArray));
+    localStorage.setItem("removedItem", JSON.stringify(removedProducts));
 
     localStorage.setItem("xyz", "helo");
     // setShowRemovedProducts(true);

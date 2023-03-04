@@ -26,14 +26,14 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
   const { t } = useTranslation("common");
 
-  const { myArray, searchProducts, setSearchProducts } =
+  const { removedProducts, searchProducts, setSearchProducts } =
     useContext(SearchContext);
 
   useEffect(() => {
     router.push(
       {
         pathname,
-        query: { ...query, myArray },
+        query: { ...query, removedProducts },
       },
       undefined,
       { scroll: false }
@@ -41,11 +41,11 @@ export const ProductGrid: FC<ProductGridProps> = ({ className = "" }) => {
 
     const newValueOfSearchProducts = "";
 
-    if (myArray.length > 0) {
+    if (removedProducts.length > 0) {
       newValueOfSearchProducts = parseInt(searchProducts) - 1;
       setSearchProducts(newValueOfSearchProducts);
     }
-  }, [myArray]);
+  }, [removedProducts]);
 
   useEffect(() => {
     console.log(query.height !== null);

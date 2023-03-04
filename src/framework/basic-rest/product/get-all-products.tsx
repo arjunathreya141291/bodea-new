@@ -13,9 +13,9 @@ const fetchProducts = async ({ queryKey }: any) => {
   const [_key, _params] = queryKey;
   var { data } = await http.get(API_ENDPOINTS.PRODUCTS);
 
-  if ("myArray" in _params) {
-    const myArray = _params.myArray;
-    data = data.filter((p: any) => !myArray.includes(p.name));
+  if ("removedProducts" in _params) {
+    const removedProducts = _params.removedProducts;
+    data = data.filter((p: any) => !removedProducts.includes(p.name));
   }
 
   if ("height" in _params) {

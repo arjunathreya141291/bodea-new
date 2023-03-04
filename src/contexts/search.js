@@ -10,7 +10,7 @@ const SearchProvider = ({ children }) => {
   const [showCustomDimensionOnImage, setShowCustomDimensionOnImage] =
     useState(false);
   const [customDimensionText, setCustomDimensionText] = useState("");
-  const [myArray, updateMyArray] = useState([]);
+  const [removedProducts, updateremovedProducts] = useState([]);
 
   const context = {
     searchProducts,
@@ -23,8 +23,8 @@ const SearchProvider = ({ children }) => {
     setShowCustomDimensionOnImage,
     customDimensionText,
     setCustomDimensionText,
-    myArray,
-    updateMyArray,
+    removedProducts,
+    updateremovedProducts,
   };
 
   return (
