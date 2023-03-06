@@ -178,7 +178,7 @@ export const ProductDifferences = () => {
       <div className="block max-w-sm p-6 bg-white border border-gray-300 rounded-lg shadow">
         {productDifference === "Storage" && (
           <>
-            <h5 className="text-heading  text-sm md:text-base font-semibold mb-7">
+            <h5 className="  text-sm md:text-base font-semibold mb-7">
               Storage
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
@@ -207,7 +207,7 @@ export const ProductDifferences = () => {
         )}
         {productDifference === "Warranty" && (
           <>
-            <h5 className="text-heading text-sm md:text-base font-semibold mb-7 skipFade">
+            <h5 className=" text-sm md:text-base font-semibold mb-7 skipFade">
               Warranty
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2 skipFade">
@@ -237,7 +237,7 @@ export const ProductDifferences = () => {
 
         {productDifference === "deskSurfaceMaterial" && (
           <>
-            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
+            <h5 className=" skipFade text-sm md:text-base font-semibold mb-7">
               Surface Material
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
@@ -267,7 +267,7 @@ export const ProductDifferences = () => {
 
         {productDifference === "Shelving" && (
           <>
-            <h5 className="text-heading skipFade text-sm md:text-base font-semibold mb-7">
+            <h5 className=" skipFade text-sm md:text-base font-semibold mb-7">
               Peripheral Shelving
             </h5>
             <div className="flex flex-wrap -m-1.5 pt-2">
