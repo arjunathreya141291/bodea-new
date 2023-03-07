@@ -11,6 +11,7 @@ const SearchProvider = ({ children }) => {
     useState(false);
   const [customDimensionText, setCustomDimensionText] = useState("");
   const [removedProducts, updateremovedProducts] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
 
   const context = {
     searchProducts,
@@ -25,6 +26,8 @@ const SearchProvider = ({ children }) => {
     setCustomDimensionText,
     removedProducts,
     updateremovedProducts,
+    searchValue,
+    setSearchValue,
   };
 
   return (
